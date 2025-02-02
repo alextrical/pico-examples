@@ -1,11 +1,11 @@
 name: Build on macOS
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - 'test_workflow'
-      - 'develop'
-      - 'master'
+  # push:
+  #   branches:
+  #     - 'test_workflow'
+  #     - 'develop'
+  #     - 'master'
 
 jobs:
   build:

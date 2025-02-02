@@ -1,10 +1,10 @@
 name: Multi GCC
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - 'master'
-      - 'test_workflow'
+  # push:
+  #   branches:
+  #     - 'master'
+  #     - 'test_workflow'
 
 jobs:
   build:
