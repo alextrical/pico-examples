@@ -72,5 +72,5 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: default_variant
-        path: ${{github.workspace}}/pico-examples/build
+        path: ${{github.workspace}}/pico-examples/build/blink/blink.uf2
         if-no-files-found: warn
