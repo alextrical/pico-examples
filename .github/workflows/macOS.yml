@@ -54,5 +54,5 @@ jobs:
         run: |
           mkdir build_native
           cd build_native
-          cmake .. -G "Unix Makefiles" -DPICO_SDK_PATH=../../pico-sdk -DCMAKE_BUILD_TYPE=Debug -DPICO_PLATFORM=host
+          cmake .. -G "Unix Makefiles" -DPICO_SDK_PATH=../../pico-sdk -DCMAKE_BUILD_TYPE=Debug -DPICO_PLATFORM=rp2040
           cmake --build .

@@ -1,5 +1,10 @@
 name: CMake
-on: [push, pull_request]
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - 'master'
+      - 'test_workflow'
 
 env:
   # Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
@@ -7,15 +12,16 @@ env:
 
 jobs:
   build:
-    if: github.repository_owner == 'raspberrypi'
-    runs-on: [self-hosted, Linux, X64]
+    # if: github.repository_owner == 'raspberrypi'
+    # runs-on: [self-hosted, Linux, X64]
+    runs-on: ubuntu-latest
 
     steps:
-    - name: Clean workspace
-      run: |
-        echo "Cleaning up previous run"
-        rm -rf "${{ github.workspace }}"
-        mkdir -p "${{ github.workspace }}"
+    # - name: Clean workspace
+    #   run: |
+    #     echo "Cleaning up previous run"
+    #     rm -rf "${{ github.workspace }}"
+    #     mkdir -p "${{ github.workspace }}"
 
     - name: Checkout pico-examples
       uses: actions/checkout@v4
