@@ -28,6 +28,9 @@ jobs:
       with:
         path: pico-examples
 
+    - uses: carlosperate/arm-none-eabi-gcc-action@v1
+    - run: arm-none-eabi-gcc --version
+
     - name: Checkout pico-sdk/develop
       uses: actions/checkout@v4
       with:
